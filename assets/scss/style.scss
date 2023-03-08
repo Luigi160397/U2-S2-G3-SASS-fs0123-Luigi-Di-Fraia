@@ -13,7 +13,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $bg_header;
+        background-color: rgba(0, 0, 0, 0.76);
         position: sticky;
         top: 0;
         z-index: 999;
@@ -34,7 +34,7 @@ header{
         }
     }
     .container1{
-        height: 200vh;
+        background-color: $bg_header;
         @include fade-in(fade-in, 1s, forwards, 0.1s);
         .container2{
             display: flex;
@@ -43,6 +43,7 @@ header{
             @include fade-in(fade-in, 1s, forwards, 0.4s);
             p{
                 width: 300px;
+                color: $testo;
             }
             img{
                 @include floating(15px,0 10px 20px, 1px solid yellow);
@@ -51,8 +52,11 @@ header{
             }
         }
         .buttons{
+            display: flex;
+            justify-content: center;
+            gap:20px;
             button{
-                @include fade-in(fade-in, 1s, forwards, 1s)
+                @include fade-in(fade-in, 1s, forwards, 1.4s)
             
             }
         }
@@ -62,8 +66,10 @@ header{
 @keyframes fade-in {
     from {
       opacity: 0;
+      transform: translateY(-100px);
     }
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
