@@ -17,6 +17,7 @@ header{
         position: sticky;
         top: 0;
         z-index: 999;
+        font-family: $font;
         img{
 
         }
@@ -34,6 +35,7 @@ header{
         }
     }
     .container1{
+        font-family: $font;
         background-color: $bg_header;
         @include fade-in(fade-in, 1s, forwards, 0.1s);
         .container2{
@@ -41,6 +43,9 @@ header{
             justify-content: center;
             align-items: center;
             @include fade-in(fade-in, 1s, forwards, 0.4s);
+            h1{
+                @include title-big
+            }
             p{
                 width: 300px;
                 color: $testo;
