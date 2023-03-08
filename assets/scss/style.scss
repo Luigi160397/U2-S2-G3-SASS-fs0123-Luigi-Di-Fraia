@@ -67,6 +67,12 @@ main{
     justify-content: center;
     .container-3{
         @include grid(3);
+        @media screen and (max-width:1220px){
+            @include grid(2);
+        }
+        @media screen and (max-width:820px){
+            @include grid(1);
+        }
         img{
             @include floating(15px,0 10px 20px, 2px solid lime);
             @include fade-in(fade-in, 1s, forwards, 2s)
