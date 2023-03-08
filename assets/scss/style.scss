@@ -7,33 +7,31 @@
 @import "partials/animazioni";
 
 
-
-header{
-    nav{
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: gray;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: $font;
+    
+    ul{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: gray;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        font-family: $font;
-        img{
-
-        }
-        ul{
-            display: flex;
-            gap: 10px;
-            li{
-                list-style-type: none;
-                a{
-                    text-decoration: none;
-                    color: $testo;
-                }
-
+        gap: 10px;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: $testo;
             }
+
         }
     }
+}
+
+header{
     .container1{
         font-family: $font;
         background-color: $bg_header;
@@ -44,7 +42,8 @@ header{
             align-items: center;
             @include fade-in(fade-in, 1s, forwards, 0.4s);
             h1{
-                @include title-big
+                @include title-big;
+                color: black;
             }
             p{
                 width: 300px;
@@ -54,6 +53,9 @@ header{
                 @include floating(15px,0 10px 20px, 1px solid yellow);
                 object-fit: cover;
                 @include fade-in(fade-in, 1s, forwards, 0.8s)
+            }
+            @media screen and (max-width:800px){
+                flex-direction: column;
             }
         }
         .buttons{
